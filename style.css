@@ -1,0 +1,917 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; 
+    
+}
+
+.header {
+    background-color: #333; /* رنگ پس‌زمینه هدر */
+    padding: 1rem 0; /* تنظیم فاصله داخلی هدر */
+}
+
+.navbar {
+    background-color: #fff; /* رنگ پس‌زمینه نوار جستجو */
+    border-bottom: 1px solid #ddd; /* حاشیه پایین نوار جستجو */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* امکان پیوستگی خطوط */
+    transition: background-color 0.3s ease; /* افزودن انتقال به پس‌زمینه نوار جستجو */
+}
+
+.navbar:hover {
+    background-color: #f8f9fa; /* تغییر رنگ پس‌زمینه نوار جستجو در حالت هاور */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0; /* حذف فاصله داخلی */
+    margin-right: auto; /* تراز کردن به چپ */
+}
+
+.navbar-brand img {
+    max-height: 80px; /* اندازه بزرگ‌تر برای لوگو */
+    border-radius: 50%; /* گرد کردن گوشه‌های لوگو */
+    margin-left: 100px; /* فاصله از متن عنوان */
+}
+
+.navbar-brand h1 {
+    margin-left: 15px;
+    font-size: 2.5rem; /* اندازه بزرگ‌تر برای عنوان */
+    color: #f3852b; /* رنگ متن نام رستوران */
+}
+
+.navbar-brand h1:hover {
+    color: #e6a067; /* تغییر رنگ عنوان در حالت هاور */
+}
+
+.navbar-nav {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center; /* منو را در وسط صفحه قرار می‌دهد */
+}
+
+.navbar-nav .nav-link {
+    color: #333; /* رنگ لینک‌ها */
+    padding: 1rem 0.8rem;
+    font-weight: bold;
+    font-size: 1.2rem; /* اندازه فونت لینک‌ها */
+    transition: color 0.3s ease; /* افزودن انتقال به رنگ لینک‌ها */
+
+}
+
+
+
+.navbar-toggler {
+    border: none;
+    background-color: #e98a0e; /* رنگ پس‌زمینه دکمه */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path stroke="%23fff" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/></svg>'); /* رنگ آیکون دکمه */
+}
+
+.burger-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* تراز کردن به راست */
+    padding: 0 1rem;
+    color: #333; /* رنگ متن */
+}
+
+.burger-info img {
+    height: 100px; /* تنظیم ارتفاع تصویر برگر */
+    width: auto; /* عرض تصویر به نسبت ارتفاع */
+    margin-right: 15px; /* فاصله از عنوان و متن */
+}
+
+.burger-info h2 {
+    font-size: 1.4rem; /* اندازه بزرگ‌تر برای عنوان بخش برجسته */
+    margin: 0; /* حذف فاصله بالا و پایین */
+}
+
+.burger-info p {
+    font-size: 1rem; /* اندازه فونت برای متن */
+    margin: 0; /* حذف فاصله بالا و پایین */
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .navbar-brand h1 {
+        font-size: 1.8rem; /* اندازه کوچک‌تر برای عنوان در دستگاه‌های کوچک */
+    }
+
+    .navbar-brand img {
+        max-height: 60px; /* اندازه کوچک‌تر برای لوگو در دستگاه‌های کوچک */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* چینش عمودی لینک‌ها در دستگاه‌های کوچک */
+       
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem; /* فاصله داخلی کوچک‌تر لینک‌ها در دستگاه‌های کوچک */
+        font-size: 1rem;
+       
+      
+    }
+    
+    .burger-info {
+        display: flex; /* نمایش برگر-info در حالت نمایشگرهای کوچک */
+        flex-direction: column; /* چینش عمودی برگر-info */
+        align-items: center; /* تراز کردن محتویات به وسط */
+        margin-left: 0;
+        padding: 1rem;
+        width: 100%; 
+    }
+
+    .burger-info img {
+        height: 100px; /* تنظیم ارتفاع تصویر برگر در دستگاه‌های کوچک */
+    }
+
+    .burger-info h2 {
+        font-size: 1.5rem;
+       margin: 20px 40px; /* اندازه کوچک‌تر برای عنوان در دستگاه‌های کوچک */
+    }
+
+    .burger-info p {
+        font-size: 1rem;
+       margin-top: 10px; /* اندازه فونت کوچک‌تر برای متن در دستگاه‌های کوچک */
+    }
+}
+
+.sec1 {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row; /* تنظیم به ردیف */
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* تنظیم متن به چپ */
+    padding: 20px;
+    min-height: 60vh; /* ارتفاع حداقل */
+    flex-wrap: wrap; /* پیچیدن در ردیف‌های جدید در صورت نیاز */
+}
+
+.sec1 .content, .sec1 .image {
+    flex: 1; /* گرفتن فضای مساوی */
+    padding: 20px; /* فاصله اطراف */
+    box-sizing: border-box; /* شامل padding و border در اندازه */
+}
+
+.sec1 .content {
+    text-align: left; /* تنظیم متن به چپ */
+}
+
+.sec1 h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sec1 p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sec1 button {
+    background-color: #e08216;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: 5px;
+}
+
+.sec1 button:hover {
+    background-color: #e6924e;
+    transition: all 0.4s;
+}
+
+.sec1 .image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sec1 img {
+    width: 100%;
+    max-width: 500px;
+    animation: rotate 60s linear infinite;
+    margin-left: 20px; /* تغییر موقعیت به سمت راست */
+}
+
+@media (max-width: 1200px) {
+    .sec1 {
+        flex-direction: row;
+    }
+    .sec1 img {
+        position: static;
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sec1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .sec1 .content {
+        order: 2;
+    }
+    .sec1 .image {
+        order: 1;
+        margin-bottom: 20px;
+    }
+    .sec1 img {
+        position: static;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sec1 h1 {
+        font-size: 1.5rem;
+    }
+    .sec1 p {
+        font-size: 0.9rem;
+    }
+    .sec1 button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    .sec1 .image {
+        display: none; /* مخفی کردن تصویر در اندازه‌های موبایل */
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.container-content {
+    background-color: #f8f5f5;
+    width: 100%;
+    padding: 20px; /* افزودن padding برای اطمینان از وجود فاصله کافی در اطراف */
+    box-sizing: border-box; /* اطمینان از محاسبه صحیح padding و border در عرض */
+    overflow: hidden
+}
+
+/* استایل کلی برای بخش sec2 */
+.sec2 {
+    margin-top: 80px;
+    padding: 20px;
+    box-sizing: border-box;
+ margin-right: 70px;
+}
+
+/* استایل کارت‌ها داخل container-content */
+.container-content .card {
+
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    min-width: 200px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-content .card:hover {
+    background-color: #e08216;
+    color: #fff;
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.container-content .card i {
+    color: #e08216;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.container-content .card:hover i {
+    color: #fff;
+}
+
+.container-content .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.container-content .card:hover h3 {
+    color: #fff;
+}
+
+.container-content .card p {
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.container-content .card:hover p {
+    color: #fff;
+}
+
+/* استایل برای بخش gallery-about */
+
+/* استایل برای sec3 */
+.sec3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* فاصله بین بخش‌ها */
+    padding: 20px;
+    flex-wrap: wrap; /* برای ریسپانسیو کردن در اندازه‌های مختلف */
+}
+
+/* استایل برای image-gallery */
+.image-gallery {
+    flex: 1; /* اشغال 50% عرض */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* چهار ستون با عرض مساوی */
+    gap: 20px; /* فاصله بین کارت‌ها */
+    padding: 10px;
+}
+
+/* استایل برای کارت‌ها */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05); /* بزرگنمایی تصویر روی هاور */
+}
+
+
+.sec3 {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.image-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    flex: 1 1 calc(50% - 10px);
+}
+
+.image-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}
+
+.about-us {
+    flex: 1;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    display: flex;
+    flex-direction: column; /* برای قرار دادن دکمه در پایین متن */
+    align-items: center;
+    text-align:justify;
+}
+
+.about-us h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.fa-utensils {
+    font-size: larger;
+    color: #ff6600;
+}
+
+.about-us .myp {
+    color: #ff6600;
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.about-us .mydiv {
+    width: 55px;
+    height: 2px;
+    background-color: #ff6600;
+    margin-bottom: 20px; /* فاصله پایین از متن */
+}
+
+.about-us p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats h1 {
+    font-size: 2.5rem;
+    color: #ff6600;
+}
+
+.stats small {
+    display: block;
+    font-size: 1rem;
+    color: #888;
+}
+
+.stats p {
+    font-size: 1.2rem;
+    margin: 5px 0 0;
+}
+
+.about-us button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.about-us button:hover {
+    background-color: #e65c00;
+}
+
+/* ریسپانسیو برای صفحه‌های کوچک‌تر */
+@media (max-width: 768px) {
+    .sec3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-gallery {
+        max-width: 100%;
+    }
+
+    .image-box {
+        flex: 1 1 100%;
+    }
+
+    .about-us {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* General styles for the container and sections */
+.fa {
+    color: orange;
+}
+.d-flex.align-items-center {
+    margin-bottom: 15px;
+}
+.d-flex.justify-content-between {
+    padding: 20px 0;
+}
+.tab-content span{
+    margin-left: 20px;
+}
+.color{
+    color: orange;
+}
+
+.fst-italic{
+    text-align: left;
+    margin-left: 10px;
+}
+.text-color{
+    color: #888;
+}
+
+.fa-icon {
+    font-size: 3rem; /* تنظیم اندازه فونت آیکون‌ها */
+}
+
+.d-flex.align-items-center {
+    margin-bottom: 15px;
+}
+
+
+
+.color {
+    color: orange;
+}
+
+/* تنظیم اندازه آیکون */
+.fa-utensils {
+    font-size: 2rem; /* اندازه آیکون پیش‌فرض */
+}
+
+/* تنظیم اندازه فونت h1 و تراز کردن آیکون و متن */
+.myh1 {
+    font-size: 1rem; /* اندازه فونت h1 پیش‌فرض */
+    display: flex;
+    align-items: center; /* تراز کردن آیکون و متن به صورت عمودی */
+}
+
+/* فاصله بین آیکون و متن */
+.myh1 i {
+    margin:10px; /* فاصله بین آیکون و متن */
+}
+
+/* تنظیم اندازه متن زیر عنوان */
+.myp {
+    font-size: 1rem; /* اندازه متن زیر عنوان */
+    margin-bottom: 0.5rem;
+}
+
+/* تنظیم طراحی خط جداکننده */
+.mydiv {
+    width: 50px;
+    height: 3px;
+    background-color: orange;
+    margin: 1rem auto;
+}
+
+/* تنظیم اندازه فونت اعداد در بخش stats */
+.stats h1 {
+    font-size: 2rem; /* اندازه فونت برای اعداد */
+}
+
+/* تنظیم اندازه فونت برای متنی که زیر اعداد است */
+.stats small {
+    display: block;
+    font-size: 0.875rem; /* اندازه فونت برای متنی که زیر اعداد است */
+    margin-bottom: 0.5rem;
+}
+
+/* تنظیم اندازه فونت برای توضیحات زیر small */
+.stats p {
+    font-size: 1rem; /* اندازه فونت برای توضیحات زیر small */
+}
+
+/* تنظیم اندازه‌ها برای عرض‌های خاص */
+@media (max-width: 976px) {
+    .fa-utensils {
+        font-size: 1.75rem; /* تنظیم اندازه آیکون برای عرض کمتر از 976px */
+    }
+
+    .myh1 {
+        font-size: 20px; 
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .fa-utensils {
+        font-size: 1.5rem; /* تنظیم اندازه آیکون برای عرض کمتر از 768px */
+    }
+
+    .myh1 {
+        font-size: 1rem; /* تنظیم اندازه فونت h1 برای عرض کمتر از 768px */
+    }
+}
+
+/* حذف خط زیر لینک‌ها */
+.nav-item a {
+    text-decoration: none; /* حذف زیرخط از لینک‌ها */
+    color: inherit;
+     /* رنگ متن را از والدین ارث می‌برد */
+}
+
+/* تغییر رنگ آیکون */
+.fa {
+    color: orange; /* رنگ آیکون */
+}
+
+/* تنظیم فاصله و تراز آیکون‌ها و متن */
+.nav-item a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px; /* فاصله پایین */
+}
+
+.nav-item a i {
+    font-size: 2rem; /* اندازه آیکون */
+    margin-right: 10px; /* فاصله بین آیکون و متن */
+}
+
+.nav-item a .ps-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* تغییر رنگ متن در حالت فعال */
+.nav-item a.active .text-color {
+    color: #e65c00; /* رنگ متن فعال */
+}
+
+.text-color {
+    color: #333; /* رنگ پیش‌فرض متن */
+}
+/* استایل خط زیر هر nav-item */
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    
+  
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* فاصله از پایین */
+    left: 0;
+    height: 2px; /* ارتفاع خط */
+    width: 0; /* عرض خط، پیش‌فرض صفر است */
+    background-color:#e65c00; /* رنگ خط */
+    transition: width 0.3s ease; /* انیمیشن برای تغییر عرض */
+}
+
+/* وقتی nav-item فعال است */
+.nav-item.active::after {
+    width: 100%; /* عرض کامل */
+}
+select{
+padding-top: 20px;
+}
+
+
+
+.sec4 {
+    background-color: #000; /* پس‌زمینه مشکی */
+    padding: 20px; /* فاصله داخلی */
+    border-radius: 10px; /* گوشه‌های گرد */
+    color: #fff; /* رنگ متن */
+}
+
+.sec4 img {
+    max-width: 100%; /* اندازه تصویر */
+    border-radius: 10px; /* گوشه‌های گرد */
+}
+
+.sec4 small {
+    color: #eb7515 !important; /* رنگ نارنجی */
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 5px; /* فاصله زیر متن */
+}
+
+.sec4 .myydiv {
+    height: 2px; /* ارتفاع خط */
+    width: 70px; /* عرض خط */
+    background-color: #e65c00; /* رنگ خط */
+}
+
+.sec4 h1 {
+    font-size: 2rem; /* اندازه فونت */
+    margin-bottom: 20px; /* فاصله پایین عنوان */
+    color: #fff; /* رنگ متن */
+}
+
+.sec4 form {
+    max-width: 600px;
+}
+
+.sec4 form .form-control {
+    padding: 10px; /* فاصله داخلی */
+    border-radius: 5px; /* گوشه‌های گرد */
+    border: 1px solid #666; /* رنگ نارنجی حاشیه */
+    background-color: #333; /* پس‌زمینه فرم‌ها */
+    color: #fff; /* رنگ متن فرم‌ها */
+    box-sizing: border-box; /* شامل کردن padding و border در اندازه کل عنصر */
+}
+.sec4 form .form-control:hover{
+    border-color:#e98a0e ;
+}
+.sec4 form .form-control::placeholder {
+    color: #bbb; /* رنگ متن placeholder */
+}
+
+.sec4 form button {
+    padding: 10px 20px; /* فاصله داخلی دکمه */
+    border: none; /* بدون حاشیه */
+    border-radius: 5px; /* گوشه‌های گرد */
+    background-color: #eb7515; /* رنگ پس‌زمینه دکمه */
+    color: white; /* رنگ متن دکمه */
+    font-size: 1rem; /* اندازه فونت */
+    cursor: pointer; /* نشانگر دست */
+}
+
+.sec4 form button:hover {
+    background-color: #e98d16; /* رنگ پس‌زمینه دکمه هنگام hover */
+}
+
+.play-icon {
+    position: absolute; /* موقعیت مطلق */
+    color: orange; /* رنگ آیکون */
+    font-size: 3rem; /* اندازه آیکون */
+    top: 50%; /* موقعیت عمودی */
+    left: 50%; /* موقعیت افقی */
+    transform: translate(-50%, -50%); /* مرکز آیکون */
+    animation: playAnimation 1s infinite; /* انیمیشن */
+}
+select{
+    padding: 2px 5px !important; /* فضای داخلی فیلد ورودی */
+  
+}
+@keyframes playAnimation {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1); /* اندازه اولیه */
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2); /* اندازه بزرگ‌تر */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sec4 img {
+        display: none; /* پنهان کردن تصویر در اندازه‌های کوچک */
+    }
+    .sec4 .play-icon {
+        display: none; /* پنهان کردن آیکون در اندازه‌های کوچک */
+    }
+}
+
+.special-request {
+    padding: 10px 15px; /* فضای داخلی فیلد ورودی */
+    height: 100px; /* ارتفاع برای بهتر دیدن موقعیت متن */
+    box-sizing: border-box; /* شامل کردن padding و border در اندازه کل عنصر */
+    position: relative; /* برای موقعیت‌یابی بهتر placeholder */
+}
+
+.special-request::placeholder {
+    color: #bbb; /* رنگ متن placeholder */
+    position: absolute; /* برای موقعیت‌یابی بهتر */
+    top: 20px; /* فاصله از بالا */
+    left: 15px; /* فاصله از چپ */
+    font-size: 17px; /* اندازه فونت placeholder */
+    transform: translateY(-50%); /* جابجایی کمی برای تنظیم عمودی */
+}
+
+
+.sec5 {
+    background-color: #f8f9fa; /* رنگ پس‌زمینه بخش */
+    padding: 50px 0; /* فاصله داخلی بالا و پایین */
+    text-align: center; /* تراز کردن متن به مرکز */
+}
+
+.sec5 small {
+    color: #eb7515; /* رنگ متن نارنجی */
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 10px; /* فاصله پایین متن کوچک */
+}
+
+.sec5 h1 {
+    font-size: 2.5rem; /* اندازه فونت عنوان */
+    margin-bottom: 40px; /* فاصله پایین عنوان */
+    color: #343a40; /* رنگ متن عنوان */
+}
+
+.sec5 .card {
+    border: none; /* حذف حاشیه کارت */
+    border-radius: 10px; /* گوشه‌های گرد کارت */
+    overflow: hidden; /* مخفی کردن محتوای اضافی کارت */
+    transition: transform 0.3s; /* انیمیشن تغییر اندازه کارت */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* سایه برای کارت */
+}
+
+.sec5 .card:hover {
+    transform: translateY(-10px); /* جابجایی کارت به بالا هنگام هاور */
+}
+
+.sec5 .card-img-top {
+    width: 100%; /* عرض تصویر */
+    height: 250px; /* ارتفاع تصویر */
+    object-fit: cover; /* پوشش دادن تصویر به طور کامل */
+    border-bottom: 3px solid #eb7515; /* حاشیه پایین تصویر */
+}
+
+.sec5 .card-body {
+    padding: 20px; /* فاصله داخلی بدنه کارت */
+    background-color: #fff; /* پس‌زمینه سفید برای بدنه کارت */
+}
+
+.sec5 .card-title {
+    font-size: 1.25rem; /* اندازه فونت عنوان کارت */
+    margin-bottom: 10px; /* فاصله پایین عنوان کارت */
+    color: #343a40; /* رنگ متن عنوان کارت */
+}
+
+.sec5 .card-text {
+    color: #6c757d; /* رنگ متن توضیحات کارت */
+    font-size: 1rem; /* اندازه فونت توضیحات کارت */
+}
+
+@media (max-width: 767.98px) {
+    .sec5 h1 {
+        font-size: 2rem; /* تنظیم اندازه فونت عنوان برای موبایل */
+    }
+
+    .sec5 .card-img-top {
+        height: 500px;
+   
+}
+}
+
+
+
+
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer .text-reset:hover {
+    color: #eb7515 !important; /* رنگ نارنجی برای هاور */
+}
+
+.footer .text-reset{
+    padding-left: 20px;
+}
+.footer .mya{
+    color: #666;
+}
+.footer .mya:hover {
+    color:#333 !important; /* رنگ نارنجی برای هاور */
+}
+
+.footer .container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.section {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
